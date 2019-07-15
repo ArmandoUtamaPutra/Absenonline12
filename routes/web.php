@@ -14,3 +14,20 @@
 Route::get('/', function () {
     return view('pages.dashboard');
 });
+
+Route::get('/peserta', function () {
+    return view('peserta');
+});
+
+Route::get('/absensi', function () {
+    return view('absensi');
+});
+
+Route::get('/users', function () {
+    return view('users');
+});
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
