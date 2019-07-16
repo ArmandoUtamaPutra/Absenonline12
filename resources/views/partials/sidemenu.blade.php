@@ -3,7 +3,7 @@
     <!-- Sidebar user panel -->
     <div class="user-panel">
       <div class="pull-left image">
-        <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+        <img src="{{ asset('dist/img/user2-160x160.jpg')}}" class="img-circle" alt="User Image">
       </div>
       <div class="pull-left info">
         <p>Alexander Pierce</p>
@@ -32,9 +32,9 @@
           </span>
         </a>
         <ul class="treeview-menu">
-          <li class="active"><a href="{{url('/peserta')}}"><i class="fa fa-circle-o"></i>Peserta</a></li>
-          <li><a href="absensi"><i class="fa fa-circle-o"></i>Absensi</a></li>
-          <li><a href="users"><i class="fa fa-circle-o"></i>Users</a></li>
+          <li class="active"><a href="{{url('/admin/peserta')}}"><i class="fa fa-circle-o"></i>Peserta</a></li>
+          <li><a href="{{url('/admin/absensi')}}"><i class="fa fa-circle-o"></i>Absensi</a></li>
+          <li><a href="{{url('/admin/users')}}"><i class="fa fa-circle-o"></i>Users</a></li>
         </ul>
       </li>
   </section>

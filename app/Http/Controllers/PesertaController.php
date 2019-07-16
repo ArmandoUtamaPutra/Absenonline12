@@ -12,7 +12,6 @@ class PesertaController extends Controller
             'id_peserta'=> $request->id_peserta,
             'nik'=> $request->nik,
             'name'=> $request->nama,
-            'password'=> $request->password,
 
             ]);
       return redirect()->back();

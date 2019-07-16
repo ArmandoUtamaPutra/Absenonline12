@@ -280,7 +280,7 @@ h1{
     </div>
 
     <!-- Login Form -->
-    <form method="POST" action="{{ route('login') }}">
+    <form method="POST" action="{{ route('login_post') }}">
             @csrf
       <input type="text" id="email" class="fadeIn second" name="email" placeholder="username">
       <input type="text" id="password" class="fadeIn third" name="password" placeholder="password">

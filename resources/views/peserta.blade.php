@@ -1,61 +1,42 @@
 @extends('pages.dashboard')
 @section('content')
 
-<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet" id="bootstrap-css">
+
 <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 <!------ Include the above in your HEAD tag ---------->
-  <ol class="breadcrumb">
+<ol class="breadcrumb">
     <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
     <li class="active">Peserta</li>
-  </ol>
+</ol>
 
 <div class="container">
+    <button class="btn btn-default-btn-xs btn-success" data-toggle="modal" data-target="#peserta"><i
+            class="glyphicon glyphicon-plus"></i> New</button>
     <div class="box">
-	<table class="table table-hover">
-        <tbody><tr>
-          <th>ID</th>
-          <th>User</th>
-          <th>Time</th>
-          <th>Date</th>
-          <th>Status</th>
-          <th>Reason</th>
-        </tr>
-        <tr>
-          <td>183</td>
-          <td>John Doe</td>
-          <td>11.00</td>
-          <td>11-7-2014</td>
-          <td><span class="label label-success">Approved</span></td>
-          <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
-        </tr>
-        <tr>
-          <td>219</td>
-          <td>Alexander Pierce</td>
-          <td>11.00</td>
-          <td>11-7-2014</td>
-          <td><span class="label label-warning">Pending</span></td>
-          <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
-        </tr>
-        <tr>
-          <td>657</td>
-          <td>Bob Doe</td>
-          <td>11.00</td>
-          <td>11-7-2014</td>
-          <td><span class="label label-primary">Approved</span></td>
-          <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
-        </tr>
-        <tr>
-          <td>175</td>
-          <td>Mike Doe</td>
-          <td>11.00</td>
-          <td>11-7-2014</td>
-          <td><span class="label label-danger">Denied</span></td>
-          <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
-        </tr>
-      </tbody>
-    </table>
+        <table class="table table-bordered">
+            <tbody>
+                <tr class="bg-primary">
+                    <th class="text-center">ID</th>
+                    <th class="text-center">User</th>
+                    <th class="text-center">Nik</th>
+                    <th class="text-center">actions</th>
+                </tr>
+                <tr>
+                    <td class="text-center">183</td>
+                    <td class="text-center">John Doe</td>
+                    <td class="text-center">2121212</td>
+                    <td class="text-center">
+                            <button data-toggle="modal" data-target="#update_program" class="edit" title="Edit"><i
+                                class="fa fa-pencil"></i></button>
+                                <a href="master_kesiswaan/" class="delete" title="Delete" data-toggle="tooltip"><i
+                                    class="fa fa-trash"></i></a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </div>
-	</div>
 </div>
+@include('modal.add_peserta')
 @endsection

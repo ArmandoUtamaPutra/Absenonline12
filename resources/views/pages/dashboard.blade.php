@@ -1,14 +1,5 @@
  @extends('apps.layout')
- @section('sectionheader')
- <h1>
-    Dashboard
-    <small>Control panel</small>
-  </h1>
-  <ol class="breadcrumb">
-    <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-    <li class="active">Dashboard</li>
-  </ol>
- @endsection
+
  @section('content')
  <!-- Small boxes (Stat box) -->
   <div class="row">
@@ -112,7 +103,7 @@
         <div class="box-body chat" id="chat-box">
           <!-- chat item -->
           <div class="item">
-            <img src="dist/img/user4-128x128.jpg" alt="user image" class="online">
+            <img src="{{ asset('dist/img/user4-128x128.jpg')}}" alt="user image" class="online">
 
             <p class="message">
               <a href="#" class="name">

@@ -15,7 +15,7 @@ class Users extends Migration
     {
         Schema::create('users', function (Blueprint $table){
             $table->increments('id');
-            $table->string('username');
+            $table->string('name_user');
             $table->string('password');
         });
     }

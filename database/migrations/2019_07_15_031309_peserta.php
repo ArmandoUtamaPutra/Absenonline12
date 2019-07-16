@@ -17,7 +17,6 @@ class Peserta extends Migration
             $table->increments('id');
             $table->integer('nik')->nullable();
             $table->string('name');
-            $table->string('password');
         });
     }
 
