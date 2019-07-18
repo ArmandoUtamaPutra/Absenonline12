@@ -14,8 +14,12 @@ class AbsensiController extends Controller
             'nama'=> $request->nama,
             'jam_masuk'=> $request->jam_masuk,
             'jam_pulang'=> $request->jam_pulang,
+            'date'=> $request->date,
+            'status'=> $request->status,
 
             ]);
       return redirect()->back();
     }
+
+   
 }

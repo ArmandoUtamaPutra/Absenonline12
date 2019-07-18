@@ -6,7 +6,7 @@
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
                 <div class="modal-body">
-                    <form action="{{ url('dashboard_news/add/') }}" method="POST">
+                    <form action="{{ route('add_peserta') }}" method="POST">
                         @csrf
                             <div class="form-group">
                                 <label for="inputEmail4">Users</label>
@@ -14,7 +14,7 @@
                             </div>
                             <div class="form-group">
                                     <label for="inputEmail4">Nik</label>
-                                    <input type="text" name="nama" class="form-control" id="inputEmail4" placeholder="">
+                                    <input type="text" name="nik" class="form-control" id="inputEmail4" placeholder="">
                                 </div>
 
                             <div class="modal-footer">

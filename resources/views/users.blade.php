@@ -19,8 +19,7 @@
                     <th>ID</th>
                     <th>Name User</th>
                     <th>Password</th>
-
-                    <th>actions</th>
+                    <th>Actions</th>
                 </tr>
                 <tr>
                     <td>183</td>

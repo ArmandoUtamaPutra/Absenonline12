@@ -19,6 +19,9 @@ class Absensi extends Migration
             $table->string('nama_peserta');
             $table->string('jam_masuk');
             $table->string('jam_pulang');
+            $table->string('date');
+            $table->string('status');
+
         });
     }
 

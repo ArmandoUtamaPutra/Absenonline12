@@ -9,11 +9,15 @@ class PesertaController extends Controller
     public function peserta(Request $request)
     {
         DB::table('peserta')->insert([
-            'id_peserta'=> $request->id_peserta,
             'nik'=> $request->nik,
             'name'=> $request->nama,
 
             ]);
       return redirect()->back();
+    }
+    public function index()
+    {
+        $peserta = DB::table('peserta')->get();
+        return view('peserta',compact('peserta'));
     }
 }

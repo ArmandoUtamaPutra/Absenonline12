@@ -20,12 +20,14 @@
                     <th class="text-center">ID</th>
                     <th class="text-center">User</th>
                     <th class="text-center">Nik</th>
-                    <th class="text-center">actions</th>
+                    <th class="text-center">Actions</th>
                 </tr>
+                @foreach ($peserta as $item)
+
                 <tr>
-                    <td class="text-center">183</td>
-                    <td class="text-center">John Doe</td>
-                    <td class="text-center">2121212</td>
+                    <td class="text-center">{{ $item->id }}</td>
+                    <td class="text-center">{{ $item->name }}</td>
+                    <td class="text-center">{{ $item->nik }}</td>
                     <td class="text-center">
                             <button data-toggle="modal" data-target="#update_program" class="edit" title="Edit"><i
                                 class="fa fa-pencil"></i></button>
@@ -33,6 +35,8 @@
                                     class="fa fa-trash"></i></a>
                     </td>
                 </tr>
+                @endforeach
+
             </tbody>
         </table>
     </div>

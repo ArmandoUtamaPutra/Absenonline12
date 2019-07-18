@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 use DB;
 use Illuminate\Http\Request;
-
+use App\absesnsi;
 class ApiController extends Controller
 {
     /**
@@ -13,8 +13,8 @@ class ApiController extends Controller
      */
     public function index(Request $request)
     {
-        $get = DB::table('peserta')->where('nik',$request->nik)->first();
-        return response()->json($get);
+        $get = DB::table('peserta')->get();
+        return $get;
     }
 
     /**
@@ -35,13 +35,17 @@ class ApiController extends Controller
      */
     public function store(Request $request)
     {
-       $absen = DB::table()->insert([
-            'id_peserta' => $request->id_peserta,
-            'nama_peserta' => $request->nama_peserta,
-            'jam_masuk' => $request->jam_masuk,
-            'jam_pulang' => $request->jam_pulang
-       ]);
-       return response()->json(['data'=>$absen,'status' => 'berhasil absen']);
+        $absen = new absesnsi();
+        $absen->id_absensi = $request->jam_absensi;
+        $absen->id_peserta = $request->id_peserta;
+        $absen->nama_peserta = $request->nama_peserta;
+        $absen->jam_masuk = $request->jam_masuk;
+        $absen->jam_pulang = $request->jam_pulang;
+        $absen->date = $request->date;
+        $absen->status = $request->status;
+
+
+        $absen->save();
     }
 
     /**
@@ -73,9 +77,9 @@ class ApiController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
-        //
+
     }
 
     /**

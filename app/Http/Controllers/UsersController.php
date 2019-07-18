@@ -9,7 +9,7 @@ class UsersController extends Controller
 {
     public function login(Request $request)
     {
-        $user = DB::table('users')->where('username',$request->email)->first();
+        $user = DB::table('users')->where('name_user',$request->email)->first();
             if($user){
                 if ($user->password == $request->password) {
                     Session::put('id_admin',$user->id);

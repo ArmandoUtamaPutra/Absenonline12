@@ -6,7 +6,7 @@
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
                 <div class="modal-body">
-                    <form action="{{ url('dashboard_news/add/') }}" method="POST">
+                    <form action="{{ route('add_peserta') }}" method="POST">
                         @csrf
                             <div class="form-group">
                                 <label for="inputEmail4">Id_peserta</label>

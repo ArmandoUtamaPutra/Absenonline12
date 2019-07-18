@@ -17,9 +17,9 @@
             <tbody>
                 <tr class="bg-primary">
                     <th>No</th>
-                    <th>id_peserta</th>
                     <th>id_absensi</th>
-                    <th>Name</th>
+                    <th>id_peserta</th>
+                    <th>Nama Peserta</th>
                     <th>Time</th>
                     <th>Last Time</th>
                     <th>Date</th>
