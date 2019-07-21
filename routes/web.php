@@ -23,8 +23,8 @@ Route::get('/peserta', 'PesertaController@index');
 Route::post('/add_peserta', 'PesertaController@peserta')->name('add_peserta');
 
 
-Route::get('/users', function () {
-    return view('users');
+Route::get('/users', 'UsersController@Users');
+
 });
-});
+
 

@@ -11,3 +11,7 @@ use Illuminate\Http\Request;
 |
 */
 Route::resource('sign_in','ApiController');
+
+
+Route::post('absensi_pulang','AbsensiController@Update_absensi');
+Route::post('absensi_masuk','AbsensiController@absensi');

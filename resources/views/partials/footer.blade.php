@@ -1,9 +1,12 @@
+<link rel="stylesheet" href="{{asset('css/animate.css')}}">
 <!-- /.content-wrapper -->
 <footer class="main-footer">
     <div class="pull-right hidden-xs">
-      <b>Version</b> 2.4.0
+    <b class="animated infinite flipOutY">Version 2.4.0 </b>
+      
+
     </div>
-    <strong>Copyright &copy; 2014-2016 <a href="https://adminlte.io">Almsaeed Studio</a>.</strong> All rights
-    reserved.
+    <center><strong class="animated infinite bounce">Copyright &copy; 2014-2016 <a href="https://adminlte.io">AbsenOnline</a>    </strong>All rights
+    reserved.</center> 
   </footer>
 

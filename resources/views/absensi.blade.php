@@ -23,7 +23,6 @@
                     <th>Time</th>
                     <th>Last Time</th>
                     <th>Date</th>
-                    <th>Status</th>
                     <th>Actions</th>
                 </tr>
                 <tr>
@@ -34,7 +33,6 @@
                     <td>07.00 Am </td>
                     <td>17.00 Pm</td>
                     <td>11-7-2014</td>
-                    <td><span class="label label-success">Approved</span></td>
                     <td>
                         <button data-toggle="modal" data-target="#update_program" class="edit" title="Edit"><i
                         class="fa fa-pencil"></i></button>

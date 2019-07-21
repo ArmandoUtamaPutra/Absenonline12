@@ -21,10 +21,11 @@
                     <th>Password</th>
                     <th>Actions</th>
                 </tr>
+                @foreach ($users as $item)
                 <tr>
                     <td>183</td>
-                    <td>John Doe</td>
-                    <td>1232323</td>
+                    <td>{{ $item->name_user }}</td>
+                    <td>{{ $item->password }}</td>
                     <td>
                             <button data-toggle="modal" data-target="#update_program" class="edit" title="Edit"><i
                                 class="fa fa-pencil"></i></button>
@@ -32,6 +33,7 @@
                                     class="fa fa-trash"></i></a>
                     </td>
                 </tr>
+                @endforeach
             </tbody>
         </table>
     </div>

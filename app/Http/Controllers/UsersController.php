@@ -26,4 +26,9 @@ class UsersController extends Controller
        return redirect('/login');
 
     }
+    public function Users()
+    {
+        $users = DB::table('users')->get();
+        return view('users',compact('users'));
+    }
 }

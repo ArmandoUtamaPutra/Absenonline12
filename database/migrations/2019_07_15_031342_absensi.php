@@ -16,11 +16,11 @@ class Absensi extends Migration
         Schema::create('absensi', function (Blueprint $table){
             $table->increments('id_absensi');
             $table->integer('id_peserta');
-            $table->string('nama_peserta');
-            $table->string('jam_masuk');
-            $table->string('jam_pulang');
-            $table->string('date');
-            $table->string('status');
+            $table->string('name');
+            $table->time('jam_masuk');
+            $table->time('jam_pulang')->nullable();
+            $table->date('date');
+            
 
         });
     }

@@ -10,15 +10,21 @@ class AbsensiController extends Controller
     {
         DB::table('absensi')->insert([
             'id_absensi'=> $request->id_absensi,
-            'id_peserta'=> $request->id_peserta,
-            'nama'=> $request->nama,
+            'name'=> $request->nama,
             'jam_masuk'=> $request->jam_masuk,
-            'jam_pulang'=> $request->jam_pulang,
             'date'=> $request->date,
-            'status'=> $request->status,
 
             ]);
-      return redirect()->back();
+    }
+    public function Update_absensi(Request $request)
+
+    {
+        if(DB::table('absensi')->where('date', $request->date)){
+            DB::table('absensi')->where('id_peserta', $request->id_absensi)->update([
+                'jam_pulang'=> $request->jam_pulang
+            ]);
+        }
+        
     }
 
    
