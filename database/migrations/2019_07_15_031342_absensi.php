@@ -20,9 +20,10 @@ class Absensi extends Migration
             $table->time('jam_masuk');
             $table->time('jam_pulang')->nullable();
             $table->date('date');
-            
+
 
         });
+        
     }
 
     /**

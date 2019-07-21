@@ -17,7 +17,6 @@
             <tbody>
                 <tr class="bg-primary">
                     <th>No</th>
-                    <th>id_absensi</th>
                     <th>id_peserta</th>
                     <th>Nama Peserta</th>
                     <th>Time</th>
@@ -25,14 +24,14 @@
                     <th>Date</th>
                     <th>Actions</th>
                 </tr>
+                @foreach ($absensi as $item)
                 <tr>
                     <td>183</td>
-                    <td>01</td>
-                    <td>001</td>
-                    <td>arman</td>
-                    <td>07.00 Am </td>
-                    <td>17.00 Pm</td>
-                    <td>11-7-2014</td>
+                    <td>{{ $item->id_peserta }}</td>
+                    <td>{{ $item->name }}</td>
+                    <td>{{ $item->jam_masuk }}</td>
+                    <td>{{ $item->jam_pulang }}</td>
+                    <td>{{ $item->date }}</td>
                     <td>
                         <button data-toggle="modal" data-target="#update_program" class="edit" title="Edit"><i
                         class="fa fa-pencil"></i></button>
@@ -40,6 +39,8 @@
                         class="fa fa-trash"></i></a>
                     </td>
                 </tr>
+                @endforeach
+
             </tbody>
         </table>
     </div>

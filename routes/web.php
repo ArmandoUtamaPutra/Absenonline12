@@ -15,9 +15,9 @@ Route::get('/', function () {
 });
 
 
-Route::get('/absensi', function () {
-    return view('absensi');
-});
+Route::get('/absensi', 'AbsensiController@get_absensi');
+
+
 
 Route::get('/peserta', 'PesertaController@index');
 Route::post('/add_peserta', 'PesertaController@peserta')->name('add_peserta');
