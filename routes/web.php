@@ -16,13 +16,16 @@ Route::get('/', function () {
 
 
 Route::get('/absensi', 'AbsensiController@get_absensi');
+Route::get('/absensi/del/{id}', 'AbsensiController@delete_absensi');
 
 
 
+Route::get('/peserta/del/{id}', 'PesertaController@delete_peserta');
 Route::get('/peserta', 'PesertaController@index');
 Route::post('/add_peserta', 'PesertaController@peserta')->name('add_peserta');
 
 
+Route::get('/users/del/{id}', 'UsersController@delete_users');
 Route::get('/users', 'UsersController@Users');
 
 });

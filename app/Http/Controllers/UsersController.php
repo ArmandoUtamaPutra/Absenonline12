@@ -7,6 +7,12 @@ use Illuminate\Http\Request;
 
 class UsersController extends Controller
 {
+    public function delete_users($id)
+    {
+    $db = DB::table('users')->where('id',$id);
+    $db->delete();
+       return redirect()->back();
+    }
     public function login(Request $request)
     {
         $user = DB::table('users')->where('name_user',$request->email)->first();

@@ -6,6 +6,12 @@ use Illuminate\Http\Request;
 
 class AbsensiController extends Controller
 {
+    public function delete_absensi($id)
+    {
+       $db = DB::table('absensi')->where('id_absensi',$id);
+       $db->delete();
+       return redirect()->back();
+    }
     public function absensi(Request $request)
     {
         DB::table('absensi')->insert([

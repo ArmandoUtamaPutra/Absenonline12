@@ -23,13 +23,13 @@
                 </tr>
                 @foreach ($users as $item)
                 <tr>
-                    <td>183</td>
+                    <td>{{ $item->id}}</td>
                     <td>{{ $item->name_user }}</td>
                     <td>{{ $item->password }}</td>
                     <td>
                             <button data-toggle="modal" data-target="#update_program" class="edit" title="Edit"><i
                                 class="fa fa-pencil"></i></button>
-                                <a href="master_kesiswaan/" class="delete" title="Delete" data-toggle="tooltip"><i
+                                <a href="users/del/{{$item->id}}" class="delete" title="Delete" data-toggle="tooltip"><i
                                     class="fa fa-trash"></i></a>
                     </td>
                 </tr>

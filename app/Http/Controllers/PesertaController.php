@@ -6,6 +6,12 @@ use Illuminate\Http\Request;
 
 class PesertaController extends Controller
 {
+    public function delete_peserta($id)
+    {
+        $db = DB::table('peserta')->where('id',$id);
+        $db -> delete();
+        return redirect()->back();
+    }
     public function peserta(Request $request)
     {
         DB::table('peserta')->insert([
