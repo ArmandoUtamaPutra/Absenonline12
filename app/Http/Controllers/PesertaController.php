@@ -20,4 +20,8 @@ class PesertaController extends Controller
         $peserta = DB::table('peserta')->get();
         return view('peserta',compact('peserta'));
     }
+    public function update_peserta(Type $var = null)
+    {
+        # code...
+    }
 }
