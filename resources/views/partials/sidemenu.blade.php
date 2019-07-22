@@ -32,9 +32,14 @@
           </span>
         </a>
         <ul class="treeview-menu">
+            @if(Session::get('Admin_login'))
           <li class="active"><a href="{{url('/admin/peserta')}}"><i class="fa fa-circle-o"></i>Peserta</a></li>
           <li><a href="{{url('/admin/absensi')}}"><i class="fa fa-circle-o"></i>Absensi</a></li>
           <li><a href="{{url('/admin/users')}}"><i class="fa fa-circle-o"></i>Users</a></li>
+          @elseif(Session::get('peserta_login'))
+          <li><a href="{{url('/admin/absensi')}}"><i class="fa fa-circle-o"></i>Absensi</a></li>
+
+          @endif
         </ul>
       </li>
   </section>

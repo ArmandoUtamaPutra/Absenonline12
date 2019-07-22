@@ -2,10 +2,15 @@
 
 Route::post('login_post','UsersController@login')->name('login_post');
 Route::get('logout','UsersController@logout')->name('logout');
+Route::post('login_peserta','UsersController@login_peserta')->name('login_peserta');
+
+Route::get('/login_peserta', function () {
+    return view('loginpeserta');
+});
 
 Route::get('/login', function () {
     return view('login');
-});
+})->name('login');
 
 Route::group(['prefix' => 'admin',  'middleware' => 'admin'], function()
 {

@@ -4,7 +4,7 @@ namespace App\Http\Middleware;
 
 use Closure;
 use Session;
-class admin
+class AccountMiddleware
 {
     /**
      * Handle an incoming request.
@@ -15,10 +15,11 @@ class admin
      */
     public function handle($request, Closure $next)
     {
-        if (Session::get('Admin_login') || Session::get('peserta_login')) {
+        if(Session::get('Admin_login')){
             return $next($request);
-        }else{
-            return redirect('login');
+
+        }else {
+            return redirect()->route('login');
         }
     }
 }
