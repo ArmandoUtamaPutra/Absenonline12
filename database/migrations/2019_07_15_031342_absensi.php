@@ -18,12 +18,12 @@ class Absensi extends Migration
             $table->integer('id_peserta');
             $table->string('name');
             $table->time('jam_masuk');
-            $table->time('jam_pulang')->nullable();
+            $table->string('jam_pulang')->nullable();
             $table->date('date');
 
 
         });
-        
+
     }
 
     /**

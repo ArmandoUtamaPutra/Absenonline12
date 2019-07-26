@@ -29,10 +29,10 @@
                     <td class="text-center">{{ $item->name }}</td>
                     <td class="text-center">{{ $item->nik }}</td>
                     <td class="text-center">
-                            <button data-toggle="modal" data-target="#update_program" class="edit" title="Edit"><i
+                        <button data-toggle="modal" data-target="#update_program" class="edit" title="Edit"><i
                                 class="fa fa-pencil"></i></button>
-                                <a href="peserta/del/{{$item->id}}" class="delete" title="Delete" data-toggle="tooltip"><i
-                                    class="fa fa-trash"></i></a>
+                        <a href="peserta/del/{{$item->id}}" class="delete" title="Delete" data-toggle="tooltip"><i
+                                class="fa fa-trash"></i></a>
                     </td>
                 </tr>
                 @endforeach

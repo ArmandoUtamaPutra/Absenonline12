@@ -8,29 +8,22 @@
                 <div class="modal-body">
                     <form action="{{ route('add_peserta') }}" method="POST">
                         @csrf
-                            <div class="form-group">
-                                <label for="inputEmail4">Id_peserta</label>
-                                <input type="text" name="nama" class="form-control" id="inputEmail4" placeholder="">
-                            </div>
-                            <div class="form-group">
-                                <label for="inputEmail4">Id_absensi</label>
-                                <textarea name="description" class="form-control" id="inputEmail4" placeholder=""></textarea>
-                            </div>
+                            
                             <div class="form-group">
                                     <label for="inputEmail4">Name</label>
-                                    <textarea name="description" class="form-control" id="inputEmail4" placeholder="Nama"></textarea>
+                                    <textarea name="name" class="form-control" id="inputEmail4" placeholder="Nama"></textarea>
                                 </div>
                                 <div class="form-group">
                                         <label for="inputEmail4">Time</label>
-                                        <textarea name="description" class="form-control" id="inputEmail4" placeholder=""></textarea>
+                                        <textarea name="time" class="form-control" id="inputEmail4" placeholder=""></textarea>
                                     </div>
                                     <div class="form-group">
                                             <label for="inputEmail4">Last Time</label>
-                                            <textarea name="description" class="form-control" id="inputEmail4" placeholder=""></textarea>
+                                            <textarea name="last_time" class="form-control" id="inputEmail4" placeholder=""></textarea>
                                         </div>
                                         <div class="form-group">
                                                 <label for="inputEmail4">Date</label>
-                                                <textarea name="description" class="form-control" id="inputEmail4" placeholder=""></textarea>
+                                                <textarea name="date" class="form-control" id="inputEmail4" placeholder=""></textarea>
                                             </div>
                             <div class="modal-footer">
                                 <button type="submit" class="btn btn-primary">Submit</button>

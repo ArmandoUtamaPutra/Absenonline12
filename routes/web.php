@@ -1,4 +1,5 @@
 <?php
+use Illuminate\Support\Facades\Route;
 
 Route::post('login_post','UsersController@login')->name('login_post');
 Route::get('logout','UsersController@logout')->name('logout');
@@ -12,12 +13,13 @@ Route::get('/login', function () {
     return view('login');
 })->name('login');
 
-Route::group(['prefix' => 'admin',  'middleware' => 'admin'], function()
+Route::get('/', 'HomeController@index')->name('home');
+Route::group(['prefix' => 'absenonline',  'middleware' => 'admin'], function()
 {
-Route::get('/home', 'HomeController@index')->name('home');
+
 Route::get('/', function () {
     return view('pages.dashboard');
-});
+})->name('index');
 
 
 Route::get('/absensi', 'AbsensiController@get_absensi');

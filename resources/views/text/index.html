@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <h2>
+                <div data-splitting> armando utama putra</div>
+            </h2>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+    <script src="https://unpkg.com/splitting/dist/splitting.min.js"></script>
+
+    <script>
+        Splitting();
+
+        var OBJ = 'h2 > div span';
+
+        var ntCh = OBJ.length;
+
+
+        // cos (index) => y
+        function curveY(i) {
+            var n = i / ntCh * 6.24;
+            return (Math.cos(n)) * -200;
+        }
+
+        // sin (index) => x
+        function curveX(i) {
+            var n = i / ntCh * 6.24;
+            return (Math.sin(n)) * -200;
+        }
+
+        //timeline baru
+        var tl = new TimelineMax({
+            delay: .5,
+            repeat: -1
+        });
+
+        //warna untuk array
+        var arr = ["#4286f4", "#338c73", "#1c8e44", "#277584", "#b72a22", "#cc169e", "#f2ee0e", "#0ad81b", "#ff07b4",
+            "#ffffff"
+        ];
+
+        //huruf zigzag
+        tl.staggerFrom(OBJ, 1, {
+            cycle: {
+                y: curveY,
+            },
+            x: 90,
+            opacity: 0
+        }, .01);
+
+        //huruf zipper
+        tl.staggerTo(OBJ, 3, {
+            cycle: {
+                y: [-80, 80],
+                color: arr,
+                skewY: [20, -20],
+                skewX: [-20, 20],
+            },
+        }, .05, "+=1");
+
+        //sin curve keluar
+        tl.staggerTo(OBJ, 2, {
+            cycle: {
+                x: curveX,
+                y: curveY,
+            },
+            color: "#ffff"
+        }, .03, "+=1");
+    </script>
+</body>
+
+</html>

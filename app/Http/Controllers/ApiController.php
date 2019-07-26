@@ -36,7 +36,6 @@ class ApiController extends Controller
     public function store(Request $request)
     {
         $absen = new absesnsi();
-        $absen->id_absensi = $request->jam_absensi;
         $absen->id_peserta = $request->id_peserta;
         $absen->nama_peserta = $request->nama_peserta;
         $absen->jam_masuk = $request->jam_masuk;

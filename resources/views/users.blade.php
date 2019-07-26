@@ -10,8 +10,6 @@
 </ol>
 
 <div class="container">
-    <button class="btn btn-default-btn-xs btn-success" data-toggle="modal" data-target="#users"><i
-            class="glyphicon glyphicon-plus"></i> New</button>
     <div class="box">
         <table class="table table-bordered">
             <tbody>
@@ -27,10 +25,10 @@
                     <td>{{ $item->name_user }}</td>
                     <td>{{ $item->password }}</td>
                     <td>
-                            <button data-toggle="modal" data-target="#update_program" class="edit" title="Edit"><i
+                        <button data-toggle="modal" data-target="#update_program" class="edit" title="Edit"><i
                                 class="fa fa-pencil"></i></button>
-                                <a href="users/del/{{$item->id}}" class="delete" title="Delete" data-toggle="tooltip"><i
-                                    class="fa fa-trash"></i></a>
+                        <a href="users/del/{{$item->id}}" class="delete" title="Delete" data-toggle="tooltip"><i
+                                class="fa fa-trash"></i></a>
                     </td>
                 </tr>
                 @endforeach

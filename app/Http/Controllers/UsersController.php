@@ -21,7 +21,7 @@ class UsersController extends Controller
                 if ($user->password == $request->password) {
                     Session::put('id_admin',$user->id);
                     Session::put('Admin_login',TRUE);
-                    return redirect('/admin');
+                    return redirect()->route('index');
                 }
             }else {
                 return redirect()->back();
@@ -30,7 +30,7 @@ class UsersController extends Controller
     public function logout()
     {
        Session::flush();
-       return redirect('/login');
+       return redirect('/');
 
     }
     public function Users()
@@ -43,7 +43,7 @@ class UsersController extends Controller
         $peserta = DB::table('peserta')->where('nik',$request->nik)->first();
         if($peserta){
             Session::put('peserta_login',TRUE);
-            return redirect('/admin');
+            return redirect()->route('index');
 
         }else {
             return redirect()->back();
