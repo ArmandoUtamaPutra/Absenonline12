@@ -33,13 +33,9 @@
 
       </ul>
       <ul class="navbar-nav ml-auto nav-flex-icons">
+       
         <li class="nav-item">
-          <a class="nav-link waves-effect waves-light">
-            <i class="fab fa-twitter"></i>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link waves-effect waves-light">
+          <a class="nav-link waves-effect waves-light" href="https://drive.google.com/open?id=1QOk2XwB8Is1MJKmBQESKHrOJZ8I1lzEE">
             <i class="fab fa-google-plus-g"></i>
           </a>
         </li>
